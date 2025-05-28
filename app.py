@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import google.generativeai as genai
 import os
 
-GOOGLE_API_KEY="AIzaSyBuDNqmup_nZ9GIY9BG1P2kFDvFv_MGbS0"
+GOOGLE_API_KEY=os.getenv("AIzaSyBuDNqmup_nZ9GIY9BG1P2kFDvFv_MGbS0")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 model = genai.GenerativeModel('gemini-2.0-flash')
